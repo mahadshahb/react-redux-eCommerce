@@ -10,7 +10,7 @@ const Details = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
     const { product } = useSelector(state => state.ProductReducer);
-    console.log(product);
+    // console.log(product);
     useEffect(() => {
         dispatch({
             type: "PRODUCT", id: id
