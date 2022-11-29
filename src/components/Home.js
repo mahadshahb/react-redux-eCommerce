@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     const { products } = useSelector(state => state.ProductReducer);
-    console.log(products);
+    // console.log(products);
     return (
         <div>
             <Header />

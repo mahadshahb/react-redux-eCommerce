@@ -6,7 +6,7 @@ import { BsDash, BsPlus } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 
 const Details = () => {
-    const [count, setCount] = useState(1);
+    const [quantity, setQuantity] = useState(1);
     const { id } = useParams();
     const dispatch = useDispatch();
     const { product } = useSelector(state => state.ProductReducer);
@@ -46,12 +46,16 @@ const Details = () => {
                         </div>
                         <div className='details_info'>
                             <div className='details__incdec'>
-                                <span className='dec' onClick={() => count > 1 ? setCount(count - 1) : setCount(0)}><BsDash /></span>
-                                <span className='quantity'>{count}</span>
-                                <span className='inc' onClick={() => setCount(count + 1)}><BsPlus /></span>
+                                <span className='dec' onClick={() => quantity > 1 ? setQuantity(quantity - 1) : setQuantity(0)}><BsDash /></span>
+                                <span className='quantity'>{quantity}</span>
+                                <span className='inc' onClick={() => setQuantity(quantity + 1)}><BsPlus /></span>
                             </div>
                             <div className='custom_btn'>
-                                <button className='btn_default'>add cart</button>
+                                <button className='btn_default' onClick={() => dispatch({
+                                    type: "ADD_TO_CART", payload: {
+                                        product, quantity
+                                    }
+                                })}>add cart</button>
                             </div>
                         </div>
                         <div className='details_para'>
