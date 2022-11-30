@@ -325,7 +325,13 @@ a {
 
 .cart__remove {
   color: red;
-  cursor: pointer;
+    cursor: pointer;
+    font-size: 24px;
+    background: whitesmoke;
+    box-shadow: 0px 0px 3px 0px #0000003b;
+    text-align: center;
+    width: 48px;
+    height: 30px;
 }
 
 .summary {

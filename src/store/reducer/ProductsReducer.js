@@ -16,7 +16,7 @@ const initialState = {
 }
 
 const ProductReducer = (state = initialState, action) => {
-    console.log(typeof action.id);
+    // console.log(typeof action.id);
     switch (action.type) {
         case "PRODUCT": return {
             ...state,

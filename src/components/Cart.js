@@ -6,7 +6,7 @@ import { BsDash, BsPlus, BsReverseBackspaceReverse } from "react-icons/bs";
 const Cart = () => {
   const { products, totalQuantities, totalPrice } = useSelector(state => state.CartReducer);
   const dispatch = useDispatch();
-  console.log(products);
+  // console.log(products);
   return (
     <React.Fragment>
       <div className='cart'>
