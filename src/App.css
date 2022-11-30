@@ -285,13 +285,107 @@ a {
   border-radius: 5px;
 }
 
+.cart {
+  margin-top: 100px;
+}
+
+.cart h3 {
+  font-weight: 600;
+  text-decoration: underline;
+  color: #ff6e68;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-2 {
+  width: 16.33333333333333%;
+}
+
+.cart__heading {
+  background-color: #f4f6f8;
+  padding: 10px;
+}
+
+.cart__image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.new_vertical {
+  align-items: center;
+  margin-top: 10px;
+}
+
+.cart__total {
+  margin-left: 10px;
+}
+
+.cart__remove {
+  color: red;
+  cursor: pointer;
+}
+
+.summary {
+  padding-left: 10px;
+}
+
+.summary__heading {
+  background-color: #f4f6f8;
+  padding: 10px;
+}
+
+.summary__details {
+  background: var(--main);
+  color: var(--white);
+  padding: 20px;
+}
+
+.checkout {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--white);
+  color: var(--main);
+  width: 100%;
+  padding: 12px 5px;
+  transition: all .5s linear;
+  margin-top: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.checkout:hover {
+  background-color: var(--lightBlack);
+  color: var(--main);
+  transform: scale(1.04);
+}
+
+.mb-100 {
+  margin-bottom: 10px;
+}
+
 @media(max-width:768px) {
   .row {
     flex-direction: column;
   }
 
+  .cart__heading {
+    display: none;
+  }
+
   .col-6 {
     width: 100%;
+  }
+
+  .col-2 {
+    width: 100%;
+    /* background: aqua; */
+    display: flex;
+    justify-content: center;
   }
 
   .custom_back {
@@ -310,6 +404,24 @@ a {
   .details_para {
     padding-right: 10px;
   }
+
+  .col-9 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .new_vertical {
+    align-items: center;
+    margin-top: 10px;
+    background-color: #d3d3d347;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .summary {
+    /* padding-left: 10px; */
+    margin-top: 16px;
+  }
 }
 
 @media(max-width:765px) {
@@ -318,11 +430,31 @@ a {
   }
 
   .col-3 {
-    width: 50%;
+    width: 100%;
+  }
+
+  .summary {
+    /* padding-left: 10px; */
+    margin-top: 16px;
+  }
+
+  .col-2 {
+    width: 100%;
+    /* background: aqua; */
+    display: flex;
+    justify-content: center;
   }
 
   .product__img img {
     object-fit: contain;
+  }
+
+  .new_vertical {
+    align-items: center;
+    margin-top: 10px;
+    background-color: #d3d3d347;
+    padding: 10px;
+    border-radius: 5px;
   }
 }
 
